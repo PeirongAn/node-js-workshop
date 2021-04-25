@@ -19,8 +19,7 @@ class PokemonModule {
       pokemon = await PokemonModel.find({ id }, null, { limit: 1 });
     } catch (error) {
       // If error log the error
-      // log(getDBerror(id, error.stack));
-      console.log('error....', error);
+      log(getDBerror(id, error.stack));
     }
     return pokemon[0];
   }
