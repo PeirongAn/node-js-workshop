@@ -1,0 +1,48 @@
+{
+  "name": "nodejs-workshop",
+  "version": "1.0.0",
+  "description": "demo for coding specification",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "babel-watch ./index.js",
+    "build": "babel src -d lib",
+    "lint": "eslint . --ext .js --cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeirongAn/node-js-workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeirongAn/node-js-workshop/issues"
+  },
+  "homepage": "https://github.com/PeirongAn/node-js-workshop#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "husky": "^6.0.0",
+    "mongoose": "^5.12.5",
+    "regenerator-runtime": "^0.13.7",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "babel-watch": "^7.4.1",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "supertest": "^6.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  }
+}
